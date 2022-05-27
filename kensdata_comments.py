@@ -23,10 +23,10 @@ from pathlib import Path
 
 
 Agg_met_country_suscrib = Path(__file__).parents[0] /'Aggregated_Metrics_By_Country_And_Subscriber_Status.csv'
-Agg_met_vid = Path(__file__).parents[1] /'Aggregated_Metrics_By_Video.csv'
-All_comme = Path(__file__).parents[2] /'All_Comments_Final.csv'
-video_perform = Path(__file__).parents[3] /'Video_Performance_Over_Time.csv'
-Aggremetv =  Path(__file__).parents[3] /'Aggregated_Metrics_By_Video - Copy.csv',index_col ='Video'
+Agg_met_vid = Path(__file__).parents[2] /'Aggregated_Metrics_By_Video.csv'
+All_comme = Path(__file__).parents[3] /'All_Comments_Final.csv'
+video_perform = Path(__file__).parents[5] /'Video_Performance_Over_Time.csv'
+Aggremetv =  Path(__file__).parents[1] /'Aggregated_Metrics_By_Video - Copy.csv'
 # In[3]:
 
 
@@ -85,7 +85,7 @@ def load_data():
     Agg_met_video['Views/sub gained'] = Agg_met_video['Views']/Agg_met_video['Suscribers gained']
     Agg_met_video.sort_values('Video publish time',ascending = False,inplace = True)
     video_performace['Date'] = pd.to_datetime(video_performace['Date'])
-    Aggremetvid2 = pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Aggregated_Metrics_By_Video - Copy.csv',index_col ='Video')
+    Aggremetvid2 = pd.read_csv(Aggremetv,index_col ='Video')
     comments = All_comments[['VidId','Comments']]
     return  Agg_met_country_suscriber,Agg_met_video,All_comments,video_performace,Aggremetvid2
 
