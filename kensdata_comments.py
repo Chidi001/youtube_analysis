@@ -66,7 +66,7 @@ def polarity(reviews):
 
 @st.cache
 def load_data():
-    Agg_met_country_suscriber = pd.read_csv(Agg_met_country_suscriber).iloc[1:,:]
+    Agg_met_country_suscriber = pd.read_csv(Agg_met_country_suscriber)
     Agg_met_video =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Aggregated_Metrics_By_Video.csv')
     All_comments =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/All_Comments_Final.csv')
     video_performace =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Video_Performance_Over_Time.csv')
