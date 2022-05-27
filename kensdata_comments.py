@@ -71,7 +71,7 @@ def load_data():
     Agg_met_country_suscriber = pd.read_csv(Agg_met_country_suscrib).iloc[1:,:]
     Agg_met_video =pd.read_csv(Agg_met_vid)
     All_comments =pd.read_csv(All_comme)
-    video_performace =pd.read_csv('video_perform')
+    video_performace =pd.read_csv(video_perform)
     Agg_met_video.columns =["Video",'Video title','Video publish time','comments added',
                                'Shares','Dislikes','Likes','Suscribers lost','Suscribers gained',
                                'RPM(USD)','CMP(USD)','Average percent viewed (%)','Average view duration',                                                                 
