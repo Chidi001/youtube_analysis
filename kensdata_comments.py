@@ -92,7 +92,7 @@ def load_data():
 
 
 #loading data into streamlit
- Agg_met_country_suscriber,Agg_met_video,All_comments,video_performace,Aggremetvid2 = load_data()
+Agg_met_country_suscriber,Agg_met_video,All_comments,video_performace,Aggremetvid2 = load_data()
 
 
 # In[15]:
