@@ -23,8 +23,10 @@ from pathlib import Path
 
 
 Agg_met_country_suscrib = Path(__file__).parents[0] /'Aggregated_Metrics_By_Country_And_Subscriber_Status.csv'
-
-
+Agg_met_vid = Path(__file__).parents[1] /'Aggregated_Metrics_By_Video.csv'
+All_comme = Path(__file__).parents[2] /'All_Comments_Final.csv'
+video_perform = Path(__file__).parents[3] /'Video_Performance_Over_Time.csv'
+Aggremetv =  Path(__file__).parents[3] /'Aggregated_Metrics_By_Video - Copy.csv',index_col ='Video'
 # In[3]:
 
 
@@ -66,10 +68,10 @@ def polarity(reviews):
 
 @st.cache
 def load_data():
-    Agg_met_country_suscriber = pd.read_csv(Agg_met_country_suscrib)
-    Agg_met_video =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Aggregated_Metrics_By_Video.csv')
-    All_comments =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/All_Comments_Final.csv')
-    video_performace =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Video_Performance_Over_Time.csv')
+    Agg_met_country_suscriber = pd.read_csv(Agg_met_country_suscrib).iloc[1:,:]
+    Agg_met_video =pd.read_csv(Agg_met_vid)
+    All_comments =pd.read_csv(All_comme)
+    video_performace =pd.read_csv('video_perform')
     Agg_met_video.columns =["Video",'Video title','Video publish time','comments added',
                                'Shares','Dislikes','Likes','Suscribers lost','Suscribers gained',
                                'RPM(USD)','CMP(USD)','Average percent viewed (%)','Average view duration',                                                                 
