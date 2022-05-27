@@ -66,7 +66,7 @@ def polarity(reviews):
 
 @st.cache
 def load_data():
-    Path = Agg_met_country_suscriber
+    Agg_met_country_suscriber = pd.read_csv(Agg_met_country_suscriber).iloc[1:,:]
     Agg_met_video =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Aggregated_Metrics_By_Video.csv')
     All_comments =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/All_Comments_Final.csv')
     video_performace =pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Video_Performance_Over_Time.csv')
@@ -85,14 +85,14 @@ def load_data():
     video_performace['Date'] = pd.to_datetime(video_performace['Date'])
     Aggremetvid2 = pd.read_csv('C:/Users/Bumblebee/Downloads/nlp-getting-started/kaggle files/youtube folder/Aggregated_Metrics_By_Video - Copy.csv',index_col ='Video')
     comments = All_comments[['VidId','Comments']]
-    return  pd.read_csv(open(Path).iloc[1:,:]),Agg_met_video,All_comments,video_performace,Aggremetvid2
+    return  Agg_met_country_suscriber,Agg_met_video,All_comments,video_performace,Aggremetvid2
 
 
 # In[14]:
 
 
 #loading data into streamlit
-Agg_met_country_suscriber,Agg_met_video,All_comments,video_performace,Aggremetvid2 = load_data()
+Path,Agg_met_video,All_comments,video_performace,Aggremetvid2 = load_data()
 
 
 # In[15]:
