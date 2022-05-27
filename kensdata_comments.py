@@ -22,7 +22,7 @@ from pathlib import Path
 # In[12]:
 
 
-Agg_met_country_suscrib = Path(__file__).parents[0] /'Aggregated_Metrics_By_Country_And_Subscriber_Status'
+Agg_met_country_suscrib = Path(__file__).parents[1] /'Aggregated_Metrics_By_Country_And_Subscriber_Status'
 
 
 # In[3]:
