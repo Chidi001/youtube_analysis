@@ -23,10 +23,10 @@ from pathlib import Path
 
 
 Agg_met_country_suscrib = Path(__file__).parents[0] /'Aggregated_Metrics_By_Country_And_Subscriber_Status.csv'
-Agg_met_vid = Path(__file__).parents[2] /'Aggregated_Metrics_By_Video.csv'
-All_comme = Path(__file__).parents[3] /'All_Comments_Final.csv'
-video_perform = Path(__file__).parents[5] /'Video_Performance_Over_Time.csv'
-Aggremetv =  Path(__file__).parents[1] /'Aggregated_Metrics_By_Video - Copy.csv'
+Agg_met_vid = Path(__file__).parents[0] /'Aggregated_Metrics_By_Video.csv'
+All_comme = Path(__file__).parents[0] /'All_Comments_Final.csv'
+video_perform = Path(__file__).parents[0] /'Video_Performance_Over_Time.csv'
+Aggremetv =  Path(__file__).parents[0] /'Aggregated_Metrics_By_Video - Copy.csv'
 # In[3]:
 
 
